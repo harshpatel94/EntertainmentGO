@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    tools:context=".MainActivity">
+
+    <!-- @drawable/large_movie_poster sourced from
+         http://content8.flixster.com/movie/11/15/86/11158674_pro.jpg -->
+    <ImageView
+        android:id="@+id/ivPosterImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:maxHeight="200dp"
+        android:layout_margin="8dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivPosterImage"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        android:layout_toRightOf="@+id/ivPosterImage"
+        android:text="The Dark Knight"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivPosterImage"
+        android:text="Imdb Score"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        android:layout_below="@id/tvTitle"
+        android:id="@+id/tvImdbScore"
+
+        />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/ivPosterImage"
+    android:id="@+id/layout_userrating"
+    android:layout_below="@+id/tvImdbScore">
+
+    <TextView
+        android:id="@+id/tvGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivPosterImage"
+        android:layout_margin="8dp"
+        android:text="User Rating"
+        android:textSize="18sp" />
+
+
+    <RatingBar
+        android:id="@+id/userRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stepSize="0.1"
+        android:layout_gravity="center"
+        android:numStars="5"
+        style="?android:attr/ratingBarStyleSmall"
+        android:rating="3.24"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        android:layout_margin="8dp"
+        android:layout_toRightOf="@+id/ivPosterImage"
+        android:isIndicator="true"
+        android:layout_below="@+id/tvImdbScore"/>
+
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_userrating"
+        android:layout_toRightOf="@+id/ivPosterImage"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="8dp"
+        android:text="Christian Bale, Joseph-Gordon Levitt"
+        android:textSize="17sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivPosterImage"
+        android:layout_margin="8dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvPlot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:text="This is a story about a protagonist defeating an antagonist" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/heart_blank"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="25sp"
+                    android:text="Rate it:"/>
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/avgRating"
+                    android:layout_gravity="center"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    android:layout_margin="2dp"
+
+                    android:isIndicator="true"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

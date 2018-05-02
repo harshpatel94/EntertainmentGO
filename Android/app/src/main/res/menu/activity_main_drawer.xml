@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_MyFav"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="My Favourites" />
+        <item
+            android:id="@+id/nav_watchlist"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="My Watchlist" />
+        <item
+            android:id="@+id/nav_toprate"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Top Rated" />
+        <!--<item-->
+            <!--android:id="@+id/nav_manage"-->
+            <!--android:icon="@drawable/ic_menu_manage"-->
+            <!--android:title="Profile" />-->
+    </group>
+
+    <item android:title="Sorted By:">
+        <menu>
+            <item
+                android:id="@+id/nav_imdbRating"
+                android:title="IMDB Rating" />
+            <item
+                android:id="@+id/nav_year"
+                android:title="Year" />
+            <item
+                android:id="@+id/nav_imdbVotes"
+                android:title = "IMDB Votes"/>
+        </menu>
+    </item>
+
+
+
+    <item android:title="Profile">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Settings" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Log out" />
+        </menu>
+    </item>
+
+</menu>
